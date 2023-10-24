@@ -1,0 +1,83 @@
+﻿<Window x:Class="AzeriChat_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AzeriChat_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#309cdc">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="6.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Image Width="40" Source="Image\Screenshot 2023-10-24 152054.png"/>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Border Background="GreenYellow" CornerRadius="360" Margin="0,2,10,2">
+                        <Label FontSize="20" Foreground="White" Content="MJ" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Label FontSize="20"  Content="Michael" Foreground="White"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Label FontSize="15" Content="Online" Foreground="White"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ListBox  ItemsSource="{Binding messages}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label FontSize="30" Content="{Binding Message_}" Height="32" Width="121"/>
+                    </DataTemplate>
+
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.6*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <TextBox FontSize="20" Foreground="#acb0a8" Text="Enter Message" VerticalContentAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="1"  Margin="0,0,0,0">
+                <Border Margin="8" Height="40" CornerRadius="7" Background="#309cdc">
+                    <Label Content="SEND" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
