@@ -56,7 +56,17 @@
             <ListBox  ItemsSource="{Binding messages}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Label  Content="{Binding Message_}"/>
+                        <StackPanel>
+                            <Border CornerRadius="10" Background="#309cdc" Width="300">
+                                <Grid>
+                                    <Label  Content="{Binding Message_}"/>
+                                    <Label Content="{Binding Date}" HorizontalContentAlignment="Right"/>
+
+                                </Grid>
+
+                            </Border>
+
+                        </StackPanel>
                     </DataTemplate>
 
                 </ListBox.ItemTemplate>

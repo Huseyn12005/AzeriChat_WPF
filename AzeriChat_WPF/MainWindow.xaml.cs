@@ -22,7 +22,7 @@ namespace AzeriChat_WPF
                 new Message {Message_ = "Sukur qaqa sen necesen",Date="12:06"},
                 new Message {Message_ = "Yaxshiyam brat var ol",Date="12:08"},
                 new Message {Message_ = "Sabah gelessen oyuna??",Date="12:09"},
-                new Message {Message_ = "Salam",Date="12:00"},
+                new Message {Message_ = "Hee)",Date="12:00"},
             };
             DataContext = this;
         }
