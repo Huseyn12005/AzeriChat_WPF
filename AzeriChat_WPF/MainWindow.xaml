@@ -56,10 +56,11 @@
             <ListBox  ItemsSource="{Binding messages}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Label FontSize="30" Content="{Binding Message_}" Height="32" Width="121"/>
+                        <Label  Content="{Binding Message_}"/>
                     </DataTemplate>
 
                 </ListBox.ItemTemplate>
+            
             </ListBox>
         </Grid>
 
